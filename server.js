@@ -1,5 +1,5 @@
 const express = require('express')
-const PORT = proxess.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const { animals } = require('./data/animals')
 
