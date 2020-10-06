@@ -1,10 +1,12 @@
 const express = require('express')
+const PORT = proxess.env.PORT || 3001;
 const app = express();
 const { animals } = require('./data/animals')
 
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
     let filteredResults = animalsArray;
+    //! may need help breaking this down
     if (query.personalityTraits) {
         //save personalityTraits as a dedicated array.
         //if personalityTraits is a string, place it into a new array and save 
@@ -48,6 +50,6 @@ app.get('/api/animals', (req, res) => {
 })
 
 
-app.listen(3001, () => {
-    console.log('API server now on port 3001!')
-})
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
